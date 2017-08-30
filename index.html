@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>菜谱</title>
+    <script src="https://cdn.bootcss.com/vue/2.4.2/vue.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    <script src="js/ajax.js"></script>
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+
+            }
+        })
+        ajax({
+            url:"http://apicloud.mob.com/v1/cook/category/query?key=208e17446c3b5",
+            type:"get",
+            dataType:"json",
+            success:function(json) {
+                // body...
+            }
+        })
+    </script>
+</body>
+</html>
